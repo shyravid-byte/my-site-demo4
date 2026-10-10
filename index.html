@@ -54,12 +54,16 @@
             #who-for ul.space-y-4 > li + li { margin-top: 0.625rem; }
             #who-for .sec-head { margin-bottom: 0.75rem; }
         }
+        /* specialties: slightly smaller type, icons and spacing so the longer list stays compact */
+        #specialties ul > li + li { margin-top: 1.125rem; }
+        #specialties li > div { width: 3rem; height: 3rem; font-size: 1.0625rem; }
+        #specialties li > p { font-size: 1.5rem; }
         /* mobile: give the specialties list more text width so e.g. "ליווי קרובים במחלה" stays on one line */
         @media (max-width: 639px) {
-            #specialties .bg-cream-50 { padding-inline: 1.25rem; }
+            #specialties .bg-cream-50 { padding: 1.25rem; }
             #specialties li { gap: 0.75rem; }
-            #specialties li > div { width: 3rem; height: 3rem; }
-            #specialties li > p { font-size: clamp(1.25rem, 6.2vw, 1.5rem); }
+            #specialties li > div { width: 2.75rem; height: 2.75rem; }
+            #specialties li > p { font-size: clamp(1.0625rem, 5.4vw, 1.25rem); }
         }
         /* equal-height hero buttons */
         div.hero-cta { width: min(100%, 27rem); margin-inline: auto; flex-wrap: nowrap; }
@@ -411,6 +415,12 @@ header nav.text-sm { font-size: 1rem; }
                             <i class="fas fa-heart-pulse" aria-hidden="true"></i>
                         </div>
                         <p class="about-text text-2xl sm:text-3xl">קושי בוויסות רגשי</p>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-shield-heart" aria-hidden="true"></i>
+                        </div>
+                        <p class="about-text text-2xl sm:text-3xl">טראומה</p>
                     </li>
                     <li class="flex items-center gap-4">
                         <div class="w-14 h-14 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center text-xl shrink-0">
