@@ -48,6 +48,12 @@
         @media (min-width: 768px) { main > section.relative { padding-top: 1rem; padding-bottom: 2rem; } }
         main > section:last-of-type { padding-bottom: 3rem; }
         .sec-head { margin-bottom: 1.25rem; }
+        /* mobile: tighter vertical spacing in the "when can therapy help" block so all 7 items fit the screen */
+        @media (max-width: 639px) {
+            #who-for .smooth-shadow { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+            #who-for ul.space-y-4 > li + li { margin-top: 0.625rem; }
+            #who-for .sec-head { margin-bottom: 0.75rem; }
+        }
         /* equal-height hero buttons */
         div.hero-cta { width: min(100%, 27rem); margin-inline: auto; flex-wrap: nowrap; }
         a.hero-btn { height: 3.5rem; padding: 0 0.75rem; gap: 0.625rem; box-sizing: border-box; justify-content: center; min-width: 0; }
@@ -191,7 +197,7 @@ header nav.text-sm { font-size: 1rem; }
             <!-- Desktop Nav Links -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
                 <a href="#about" class="hover:text-sage-700 transition">נעים להכיר</a>
-                <a href="#who-for" class="hover:text-sage-700 transition">למי הטיפול יכול לעזור?</a>
+                <a href="#who-for" class="hover:text-sage-700 transition">מתי הטיפול יכול לעזור?</a>
                 <a href="#specialties" class="hover:text-sage-700 transition">תחומי התמחות</a>
                 <a href="#credentials" class="hover:text-sage-700 transition">עיסוק והשכלה</a>
                 <a href="#contact" class="hover:text-sage-700 transition">יצירת קשר</a>
@@ -213,7 +219,7 @@ header nav.text-sm { font-size: 1rem; }
         <!-- Mobile dropdown menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-cream-100 border-b border-cream-200 px-6 py-4 space-y-3">
             <a href="#about" class="block text-gray-700 hover:text-sage-700 font-medium py-1">נעים להכיר</a>
-            <a href="#who-for" class="block text-gray-700 hover:text-sage-700 font-medium py-1">למי הטיפול יכול לעזור?</a>
+            <a href="#who-for" class="block text-gray-700 hover:text-sage-700 font-medium py-1">מתי הטיפול יכול לעזור?</a>
             <a href="#specialties" class="block text-gray-700 hover:text-sage-700 font-medium py-1">תחומי התמחות</a>
             <a href="#credentials" class="block text-gray-700 hover:text-sage-700 font-medium py-1">עיסוק והשכלה</a>
             <a href="#contact" class="block text-gray-700 hover:text-sage-700 font-medium py-1">יצירת קשר</a>
@@ -309,7 +315,7 @@ header nav.text-sm { font-size: 1rem; }
     <section id="who-for" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center sec-head">
-                <h2 class="text-3xl sm:text-4xl font-bold text-warmdark">למי הטיפול יכול לעזור?</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-warmdark">מתי הטיפול יכול לעזור?</h2>
             </div>
             <div class="bg-cream-50 p-8 sm:p-12 rounded-3xl smooth-shadow border border-cream-200">
                 <ul class="space-y-4">
@@ -317,37 +323,43 @@ header nav.text-sm { font-size: 1rem; }
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם אתם.ן נמצאים.ות בתקופה של משבר עמוק.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה נמצא.ת בתקופה של משבר עמוק.</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם אתם מרגישים "תקועים" בעבודה, בלימודים, בחיים.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה מרגיש.ה שהחיים עומדים במקום ורוצה לזוז קדימה.</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">מתקשים לקיים מערכת יחסים זוגית יציבה.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם קשה לך לקיים מערכת יחסים זוגית יציבה.</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם אתן.ם חווים מצוקה בעקבות טראומה שעברתם.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה חווה מצוקה בעקבות טראומה שעברת.</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם אתם מטפלים באדם חולה וזקוקים לתמיכה רגשית.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה מתקשה להתמודד עם הרגשות שלך ולשלוט בתגובות שלך.</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם יש לכם.ן רצון לעבור תהליך של צמיחה ושל התפתחות אישית.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה מטפל.ת באדם חולה וזקוק.ה לתמיכה רגשית.</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fas fa-check text-sm" aria-hidden="true"></i>
+                        </div>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם יש לך רצון לעבור תהליך של צמיחה ושל התפתחות אישית.</span>
                     </li>
                 </ul>
             </div>
