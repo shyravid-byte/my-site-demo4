@@ -54,6 +54,13 @@
             #who-for ul.space-y-4 > li + li { margin-top: 0.625rem; }
             #who-for .sec-head { margin-bottom: 0.75rem; }
         }
+        /* mobile: give the specialties list more text width so e.g. "ליווי קרובים במחלה" stays on one line */
+        @media (max-width: 639px) {
+            #specialties .bg-cream-50 { padding-inline: 1.25rem; }
+            #specialties li { gap: 0.75rem; }
+            #specialties li > div { width: 3rem; height: 3rem; }
+            #specialties li > p { font-size: clamp(1.25rem, 6.2vw, 1.5rem); }
+        }
         /* equal-height hero buttons */
         div.hero-cta { width: min(100%, 27rem); margin-inline: auto; flex-wrap: nowrap; }
         a.hero-btn { height: 3.5rem; padding: 0 0.75rem; gap: 0.625rem; box-sizing: border-box; justify-content: center; min-width: 0; }
@@ -323,13 +330,13 @@ header nav.text-sm { font-size: 1rem; }
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה נמצא.ת בתקופה של משבר עמוק.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה חווה משבר אישי בחייך.</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה מרגיש.ה שהחיים עומדים במקום ורוצה לזוז קדימה.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה מתמודד.ת עם מצוקה בעקבות טראומה שעברת.</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
@@ -341,19 +348,19 @@ header nav.text-sm { font-size: 1rem; }
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה חווה מצוקה בעקבות טראומה שעברת.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה מרגיש.ה שהרגש מציף אותך ומתקשה לשלוט בתגובות שלך.</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה מתקשה להתמודד עם הרגשות שלך ולשלוט בתגובות שלך.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה מטפל.ת באדם חולה וזקוק.ה לתמיכה ולליווי.</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fas fa-check text-sm" aria-hidden="true"></i>
                         </div>
-                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה מטפל.ת באדם חולה וזקוק.ה לתמיכה רגשית.</span>
+                        <span class="about-text text-lg sm:text-xl leading-relaxed">אם את.ה מרגיש.ה "תקוע.ה" ורוצה לזוז קדימה.</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-0.5">
